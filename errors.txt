@@ -1,0 +1,10 @@
+db.csv:Line 2: # === Valid flights === → comment line, ignored for data parsing
+db.csv:Line 11: # === Invalid flights (for testing validation) === → comment line, ignored for data parsing
+db.csv:Line 12: BADLINE,NO_DATE,NO_TIME → missing required fields
+db.csv:Line 13: BA_BAD,RIX,LON,2025-11-15 11:00,INVALID_DATE,250.00 → invalid flight_id format, invalid arrival datetime
+db.csv:Line 14: SK404,OSL,RIX,2025-11-15 14:00,2025-11-15 12:00,120.00 → arrival before or equal to departure
+db.csv:Line 16: QR1,DOH,SYD,INVALID_DATETIME,2025-11-17 23:30,980.00 → invalid departure datetime
+db.csv:Line 17: KL1999,AMS,,2025-11-14 09:00,2025-11-14 11:15,180.00 → missing destination field
+db.csv:Line 18: AY503,HEL,RIX,2025-11-15 13:20,2025-11-15 14:15,-10.00 → negative or zero price value
+db.csv:Line 19: LH999999999,FRA,LAX,2025-11-13 09:30,2025-11-13 18:10,700.00 → flight_id length must be 2-8 alphanumeric characters
+db.csv:Line 20: SN2902,BRU,LHR,2025-13-40 10:00,2025-13-40 12:00,99.99 → invalid departure datetime, invalid arrival datetime
