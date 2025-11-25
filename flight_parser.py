@@ -1,17 +1,3 @@
-#!/usr/bin/env python3
-"""
-Flight schedule parser and query tool
-
-Usage examples:
-  python flight_parser.py -i data/db.csv
-  python flight_parser.py -d data/
-  python flight_parser.py -j data/db.json -q data/query.json --studentid 123456 --name John --lastname Doe
-
-Outputs:
-- db.json (or custom -o)
-- errors.txt
-- response_<studentid>_<name>_<lastname>_<YYYYMMDD_HHMM>.json (when -q used)
-"""
 import argparse
 import csv
 import glob
